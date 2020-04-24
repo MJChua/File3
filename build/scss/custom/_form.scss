@@ -1,0 +1,204 @@
+.glp{
+  &-checkbox{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    &-form{
+      width: 20px;
+      .glp-checkbox-input{
+        position: relative;
+        vertical-align: top;
+      }
+    }
+    &-label{
+      width: 20px;
+      height: 20px;
+      border: 1px solid $GLPMainColor;
+      // border-radius: 3px;
+      background-color: #fff;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      cursor: pointer;
+      text-align: center;
+      line-height: 19px;
+      color: transparent;
+      // &::after{
+      //   content: '';
+      //   position: absolute;
+      //   top: 50%;
+      //   left: 50%;
+      //   transform: translate(-50%, -50%);
+      //   width: 60px;
+      //   height: 60px;
+      // }
+    }
+    &-input{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    &-input:checked + &-label, input[type="checkbox"]:checked + &-label{
+      color: #fff;
+      background-color: $GLPMainColor;
+    }
+  }
+  &-radio{
+    position: relative;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    display: inline-block;
+    margin-right: 5px;
+    &-label{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 100%;
+      height: 100%;
+      border: 1px solid $GLPMainColor;
+      border-radius: 20px;
+      background-color: #fff;
+      margin: 0;
+      &::after{
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 50%;
+        height: 50%;
+        background-color: #fff;
+        border-radius: 20px;
+      }
+    }
+    &-input:checked + &-label{
+      background-color: $GLPMainColor;
+    }
+    & + label{
+      margin: 0;
+    }
+    &-gameSkin{
+      width: 100%;
+      position: relative;
+      @at-root {
+        .gameSkin-group{
+          font-size: 0;
+          .form-check{
+            max-width: 120px;
+            width: 33.3%;
+          }
+        }
+      }
+      input{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+        &:checked + label{
+          background-color: #fff;
+          border-color: $GLPMainColor;
+          img, .glp-radio-gameSkin-text{
+            opacity: 1;
+          }
+        }
+      }
+      label{
+        position: relative;
+        width: 100%;
+        padding-top: 100%;
+        margin: 0;
+        background-color: #F4F4F4;
+        border: 2px solid #F4F4F4;
+        z-index: 2;
+        cursor: pointer;
+        &:hover{
+          background-color: #f5f1ec;
+        }
+      }
+      &-img{
+        position: absolute;
+        top: 0;
+        img{
+          width: 100%;
+          opacity: 0.6;
+        }
+      }
+      &-text{
+        text-align: center;
+        padding-bottom: 10px;
+        font-weight: 600;
+        font-size: 16px;
+        opacity: 0.6;
+      }
+    }
+  }
+  &-input{
+    &-clear{
+      display: none;
+    }
+    &-text{
+      border-radius: 0;
+      &:focus{
+        border-color: $GLPMainColor
+      }
+    }
+    &-group{
+      .input-group-prepend,
+      .input-group-append{
+        span{
+          background-color: #f5f1ec;
+          border-radius: 0;
+        }
+      }
+      &-number{
+        min-width: 137px;
+        width: auto;
+        input{
+          z-index: 4;
+          padding-left: 2px;
+          padding-right: 2px;
+        }
+        .btn{
+          border-color: #D2D6DE;
+          background-color: #fff;
+          color: #525252;
+          &:active:not(:disabled):not(.disabled){
+            background-color: $GLPMainColor !important;
+          }
+          &:hover, &:focus{
+            border-color: #D2D6DE;
+            background-color: #fff;
+            color: #525252;
+          }
+          &:disabled{
+            background-color: #fff;
+          }
+        }
+      }
+    }
+    &-number{
+      &::-webkit-outer-spin-button,
+      &::-webkit-inner-spin-button{
+        -webkit-appearance: none;
+        margin: 0;
+      }
+    }
+  }
+  &-textarea{
+    &:focus{
+      border-color: $GLPMainColor;
+    }
+  }
+  &-trCheckbox{
+    cursor: pointer;
+    &_checked{
+      background-color: #FFFAF2;
+    }
+  }
+}

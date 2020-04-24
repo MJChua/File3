@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <!-- Global-->
+    <link rel="stylesheet" href="/plugins/admin-lte/css/adminlte.min.css"/>
+    <link rel="stylesheet" href="/plugins/fontawesome-free/css/all.css"/>
+    <!-- ./Global-->
+    <!-- dataTables-->
+    <link rel="stylesheet" href="/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css"/>
+    <link rel="stylesheet" href="/plugins/datatables-fixedheader/css/fixedHeader.bootstrap4.min.css"/>
+    <!-- ./dataTables-->
+    <!-- console UI-->
+    <link rel="stylesheet" href="/dist/css/GLP-Console.css"/>
+    <!-- ./console UI-->
+    <title>GLP GAME Console | Stage Game List</title>
+  </head>
+  <body class="hold-transition sidebar-mini">
+    <div class="wrapper">
+      <!-- 上方導覽列-->
+      <nav class="main-header navbar navbar-expand navbar-white">
+        <!-- 左側按鈕-->
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link glp-bars" data-widget="pushmenu" href="#"><i class="fas fa-bars"></i></a></li>
+        </ul>
+        <!-- ./左側按鈕-->
+        <!-- 右側按鈕-->
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item dropdown"><a class="nav-link user-panel" data-toggle="dropdown" href="#"> 
+              <div class="infoHi">Alexander Pierce</div></a>
+            <div class="dropdown-menu dropdown-menu-right"><a class="dropdown-item" href="#"> <i class="fas fa-user-circle"></i>Edit</a><a class="dropdown-item" href="#"> <i class="fas fa-sign-out-alt"></i>Sign out</a></div>
+          </li>
+        </ul>
+        <!-- ./右側按鈕-->
+      </nav>
+      <!-- ./上方導覽列-->
+      <aside class="main-sidebar glp-sidebar">
+        <!-- 左側列上方logo--><a class="brand-link glp-logo" href="index.html"><img class="brand-image" src="/dist/image/GLPLogo.png" alt="GLP Logo"/><span class="brand-text">GAME-Console</span></a>
+        <!-- 左側清單-->
+        <div class="sidebar">
+          <nav class="glp-nav">
+            <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+              <li class="nav-item"><a class="nav-link active" href="/StageGameList.html"><i class="nav-icon fas fa-tv"></i>
+                  <p>Stage Control</p></a></li>
+              <li class="nav-item"><a class="nav-link" href="/PatronActivation.html"><i class="nav-icon fas fa-user"></i>
+                  <p>Patron Activation</p></a></li>
+            </ul>
+          </nav>
+        </div>
+      </aside>
+      <div class="content-wrapper">
+        <div class="content-header">
+          <div class="container-fluid">
+            <div class="row mb-2">
+              <div class="col-sm-12">
+                <div class="float-right d-none d-sm-inline">
+                  <!-- 麵包屑-->
+                  <ol class="breadcrumb">
+                    <div class="breadcrumb-item">Home</div>
+                    <li class="breadcrumb-item">Stage Game List</li>
+                  </ol>
+                  <!-- ./麵包屑-->
+                </div>
+                <h1 class="m-0 text-dark align-middle d-inline-block mr-3">Stage Game List</h1>
+                <div class="d-inline-block align-middle btn-group glp-btn-group-header">
+                  <div class="btn glp-btn glp-btn-input glp-dropRight">
+                    <div class="form-inline">
+                      <div class="input-group input-group-sm">
+                        <div class="input-group-append">
+                          <div class="btn glp-btn glp-dropRight-click"><i class="fas fa-search"></i></div>
+                        </div>
+                        <input class="form-control form-control-navbar glp-dropRight-item glp-dropRight-input glp-input" id="DataTableSearch" type="search" placeholder="Search" aria-label="Search"/>
+                        <div class="input-group-append">
+                          <div class="btn glp-btn glp-input-clear">
+                            <div class="fas fa-times-circle"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="content">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-12">
+                <div class="card">
+                  <div class="card-body">
+                    <table class="table glp-table display nowrap" id="StageGameList">
+                      <thead>
+                        <tr>
+                          <th>Status</th>
+                          <th>Event CodeStatus</th>
+                          <th>Session CodeStatus</th>
+                          <th>Event NameStatus</th>
+                          <th>Activation DeadlineStatus</th>
+                          <th>Start DateStatus</th>
+                          <th>End DateStatus</th>
+                          <th>Total Entry QtyStatus</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr class="glp-table-hover glp-pointer" onclick="javascript:location.href='/StageControl.html'">
+                          <td class="glp-text-success">Running</td>
+                          <td>85365</td>
+                          <td>85365-2019-12-25</td>
+                          <td>National Day Super Invincible Lucky Draw</td>
+                          <td>2019-12-25 15:00</td>
+                          <td>2019-12-23</td>
+                          <td>2019-12-25</td>
+                          <td>12</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer class="main-footer glp-footer">
+        <div class="float-right d-none d-sm-inline">Version 0.0.1</div>Copyright &copy; 2019 Grand Lisboa Information Technology Ltd. All rights reserved.
+      </footer>
+    </div>
+    <!-- Global-->
+    <script src="/plugins/jquery/jquery.min.js"></script>
+    <script src="/plugins/promise-polyfill/polyfill.min.js"></script>
+    <script src="/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="/plugins/admin-lte/js/adminlte.min.js"></script>
+    <!-- ./Global-->
+    <!-- dataTables-->
+    <script src="/plugins/datatables/jquery.dataTables.min.js"></script>
+    <script src="/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+    <script src="/plugins/datatables-fixedheader/js/dataTables.fixedHeader.min.js"></script>
+    <script src="/plugins/datatables-fixedheader/js/fixedHeader.bootstrap4.min.js"></script>
+    <script src="/dist/js/GLP-datatable.js"></script>
+    <!-- ./dataTables-->
+  </body>
+</html>

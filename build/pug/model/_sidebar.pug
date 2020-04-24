@@ -1,0 +1,19 @@
+mixin sidebar(active)
+  aside.main-sidebar.glp-sidebar
+    // 左側列上方logo
+    a.brand-link.glp-logo(href="index.html")
+      img.brand-image(src="/dist/image/GLPLogo.png" alt="GLP Logo")
+      span.brand-text GAME-Console
+      
+    // 左側清單
+    .sidebar
+      nav.glp-nav
+        ul.nav.nav-pills.nav-sidebar.flex-column(data-widget="treeview" role="menu" data-accordion="false")
+          li.nav-item
+            a.nav-link(class=(active == 'StageGame') ? 'active' : '',href="/StageGameList.html")
+              i.nav-icon.fas.fa-tv
+              p Stage Control
+          li.nav-item
+            a.nav-link(class=(active == 'Patron') ? 'active' : '',href="/PatronActivation.html")
+              i.nav-icon.fas.fa-user
+              p Patron Activation

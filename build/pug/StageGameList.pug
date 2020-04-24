@@ -1,0 +1,61 @@
+extends layout/layout.pug
+include model/_sidebar.pug
+include model/_breadcrumb.pug
+
+block links
+  include plugins/datatable/_link-dataTable.pug
+  
+block title
+  title GLP GAME Console | Stage Game List
+  
+block wrapper
+  +sidebar('StageGame')
+  .content-wrapper
+    .content-header
+      .container-fluid
+        .row.mb-2
+          .col-sm-12
+            .float-right.d-none.d-sm-inline
+              +breadcrumb(['Stage Game List'])
+            h1.m-0.text-dark.align-middle.d-inline-block.mr-3 Stage Game List
+            .d-inline-block.align-middle.btn-group.glp-btn-group-header
+              .btn.glp-btn.glp-btn-input.glp-dropRight
+                .form-inline
+                  .input-group.input-group-sm
+                    .input-group-append
+                      .btn.glp-btn.glp-dropRight-click
+                        i.fas.fa-search
+                    input#DataTableSearch.form-control.form-control-navbar.glp-dropRight-item.glp-dropRight-input.glp-input(type="search" placeholder="Search" aria-label="Search")
+                    .input-group-append
+                      .btn.glp-btn.glp-input-clear
+                        .fas.fa-times-circle
+    .content
+      .container-fluid
+        .row
+          .col-12
+            .card
+              .card-body
+                table#StageGameList.table.glp-table.display.nowrap
+                  thead
+                    tr
+                      th Status
+                      th Event CodeStatus
+                      th Session CodeStatus
+                      th Event NameStatus
+                      th Activation DeadlineStatus
+                      th Start DateStatus
+                      th End DateStatus
+                      th Total Entry QtyStatus
+                  tbody
+                    tr.glp-table-hover.glp-pointer(onclick="javascript:location.href='/StageControl.html'")
+                      td.glp-text-success Running
+                      td 85365
+                      td 85365-2019-12-25
+                      td National Day Super Invincible Lucky Draw
+                      td 2019-12-25 15:00
+                      td 2019-12-23
+                      td 2019-12-25
+                      td 12
+
+block scripts       
+  include plugins/datatable/_src-dataTables.pug

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+html(lang="en")
+  head
+    include ../model/_meta
+    include ../model/_link
+    block links
+    // console UI
+    link(rel="stylesheet", href="/dist/css/GLP-Console.css")
+    // ./console UI
+    block title
+    
+  body.hold-transition.sidebar-mini
+    .wrapper
+      include ../model/_nav
+      block wrapper
+      
+      include ../model/_footer
+    include ../model/_src
+    block scripts
+    //- script(src="/dist/js/GLP-Console.js")

@@ -1,0 +1,23 @@
+// 上方導覽列
+nav.main-header.navbar.navbar-expand.navbar-white
+  // 左側按鈕
+  ul.navbar-nav
+    li.nav-item
+      a.nav-link.glp-bars(data-widget='pushmenu', href='#')
+        i.fas.fa-bars
+  // ./左側按鈕
+  
+  // 右側按鈕
+  ul.navbar-nav.ml-auto
+    li.nav-item.dropdown
+      a.nav-link.user-panel(data-toggle='dropdown', href='#') 
+        .infoHi Alexander Pierce
+      .dropdown-menu.dropdown-menu-right
+        a.dropdown-item(href='#') 
+          i.fas.fa-user-circle
+          | Edit
+        a.dropdown-item(href='#') 
+          i.fas.fa-sign-out-alt
+          | Sign out
+  // ./右側按鈕
+// ./上方導覽列

@@ -1,0 +1,116 @@
+// ====== default & bootstrap
+a{
+  color: $GLPMainColor;
+  &:hover{
+    color: #945c00
+  }
+  
+}
+
+button, button:focus{
+  outline: none;
+  border-color: transparent;
+}
+.form-control:disabled, input:disabled{
+  background-color: #fff;
+  color: #525252;
+}
+.content-wrapper{
+  background-color: #f5f1ec;
+}
+.user-panel{
+  padding: 2px;
+  .info{
+    vertical-align: middle;
+    a{
+      color: $GLPBackColor;
+    }
+  }
+}
+.dropdown-item{
+  &.active,&:active{
+    background-color: $GLPMainColor;
+  }
+}
+.card-footer{
+  background-color: #fff;
+  border-top: 1px solid rgba(0,0,0,.125)
+}
+
+.roleInfo,.DepartmentInfo{
+  cursor: pointer;
+}
+.modal-header{
+  flex-wrap: wrap;
+}
+.card-title{
+  font-size: 1.3rem;
+}
+.widget-user .widget-user-username{
+  color: #fff;
+}
+div.dataTables_scrollBody table tbody tr:first-child th, div.dataTables_scrollBody table tbody tr:first-child td{
+  border-top: 1px solid #f4f4f4;
+}
+// ====== plugins 
+.Swal-btn{
+  margin: 0 0.5rem;
+}
+.dataTables_wrapper{
+  &#StageGameList_wrapper,
+  &#MemberList_wrapper,
+  &#PatronActivation_wrapper,
+  &#StageList_wrapper,
+  &#MemberList2_wrapper,
+  &#eventPrizeList_wrapper{
+    >.row:first-child{
+      display: none;
+    }
+  }
+  #StageList_wrapper{
+    .dataTables_scroll{
+      padding-bottom: 15px;
+    }
+    
+  }
+  .page-link{
+    color: #6c757d;
+    &:focus{
+      box-shadow: none;
+    }
+  }
+  .dataTables_paginate{
+    .page-item{
+      &.disabled .page-link{
+        border-color: #E4E4E4;
+      }
+      &.active .page-link{
+        border-color: $GLPMainColor;
+        background-color: $GLPMainColor;
+      }
+    }
+  }
+}
+.select2-container--default{
+  .select2-selection--single{
+    border-radius: 0;
+    &:focus{
+      outline: none;
+      border-color: $GLPMainColor;
+    }
+  }
+  .select2-results__option{
+    &[aria-selected=true]{
+      background-color: #FFFAF2;
+    }
+    &--highlighted[aria-selected]{
+      background-color: $GLPMainColor;
+      &:hover{
+        background-color: $GLPMainColor;
+      }
+    }
+  }
+}
+.file-preview,.form-control{
+  border-radius: 0;
+}

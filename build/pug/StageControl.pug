@@ -1,0 +1,49 @@
+extends layout/layout.pug
+include model/_sidebar.pug
+include model/_breadcrumb.pug
+
+block links
+  //- include plugins/datatable/_link-dataTable.pug
+
+block title
+  title GLP GAME Console | Stage Control
+
+block wrapper
+  +sidebar('StageGame')
+  .content-wrapper
+    .content-header
+      .container-fluid
+        .row.mb-2
+          .col-sm-12
+            .float-right.d-none.d-sm-inline
+              +breadcrumb(['Stage Game List','Stage Control'])
+            a.m-0.text-dark.align-middle.d-inline-block.mr-3(href="StageGameList.html" )
+              h1
+                i.fas.fa-arrow-left.pr-2 
+                | Stage Control
+    //- content內容
+    section.content
+      .content-fluid
+        .row
+          //- 左側內容
+          .col-sm-2.pl-0.pr-4
+            //- TV Screen
+            include model/_tv-screen.pug
+          //- 左側內容 end
+
+          //- 選到Draw Prize後出現的-中間內容
+          .col-sm-4
+            //- Prize List
+            include model/_prize-list.pug
+          //- 選到Draw Prize後出現的中間內容 end
+
+          //- 表單-右側內容
+          .col-sm-6
+            include model/_form-list.pug
+          //- 表單-右側內容 end
+    //- content內容 end
+
+          
+          
+block scripts       
+  script(src="/dist/js/GLP-StageControl.js")

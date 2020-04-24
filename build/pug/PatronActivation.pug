@@ -1,0 +1,26 @@
+extends layout/layout.pug
+include model/_sidebar.pug
+include model/_breadcrumb.pug
+
+block links
+  include plugins/datatable/_link-dataTable.pug
+  
+block title
+  title GLP GAME Console | Patron Activation
+  
+block wrapper
+  +sidebar('Patron')
+  .content-wrapper
+    .content-header
+      .container-fluid
+        .row.mb-2
+          .col-sm-12
+            .float-right.d-none.d-sm-inline
+              +breadcrumb(['Patron Activation'])
+            h1.m-0.text-dark.align-middle.d-inline-block.mr-3 Patron Activation
+    .content
+      .container-fluid
+        .row
+          
+block scripts       
+  include plugins/datatable/_src-dataTables.pug

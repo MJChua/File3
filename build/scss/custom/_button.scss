@@ -1,0 +1,113 @@
+.glp-btn{
+  &{
+    background-color: $GLPMainColor;
+    color: #fff;
+    cursor: pointer;
+  }
+  .no-touch &:hover{
+    // color: rgba(255,255,255,0.6);
+    box-shadow: 0px 3px 8px $GLPMainColor;
+    .glp-btn{
+      box-shadow: none;
+    }
+  }
+  &:hover{
+    color: #fff;
+  }
+  &-danger{
+    background-color: $GLPDangerColor;
+    color: #fff;
+  }
+  &-success{
+    background-color: $GLPSuccessColor;
+    color: #fff;
+  }
+  &-group{
+    display: flex;
+    align-items: center;
+    margin-right: 6px;
+    .glp-btn{
+      display: inline-block;
+      margin: 0 5px
+    }
+    &-header{
+      .glp-btn{
+        margin: 5px 0;
+        &:nth-last-child(1){
+          background-color: #D1BA95;
+          .glp-btn{
+            background-color: #D1BA95;
+            margin: 0;
+          }
+        }
+        &:nth-last-child(3){
+          background-color: #B7A68A;
+          .glp-btn{
+            background-color: #B7A68A;
+          }
+        }
+        &:nth-last-child(4){
+          background-color: #A29278;
+          .glp-btn{
+            background-color: #A29278;
+          }
+        }
+        &:nth-last-child(5){
+          background-color: #7E7360;
+          .glp-btn{
+            background-color: #7E7360;
+          }
+        }
+      }
+    }
+  }
+  &-input{
+    height: 38px;
+    padding: 3px;
+    input,input:focus{
+      background-color: transparent;
+      color: #fff;
+      border: none;
+      border-radius: 0;
+      &::placeholder{
+        color: #fff;
+      }
+      &[type=search]::-webkit-search-cancel-button{
+        -webkit-appearance: none;
+      }
+    }
+    
+  }
+  &-transparent{
+    background-color: transparent !important;
+    color: inherit;
+    .no-touch &:hover{
+      box-shadow: none;
+    }
+  }
+  &-cilcle{
+    border-radius: 100%;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    padding: 0;
+    &:not(button){
+      line-height: 30px;
+    }
+  }
+  &-default{
+    color: #828282;
+    background-color: transparent;
+    .no-touch &:hover{
+      color: #fff;
+      background-color: $GLPMainColor;
+    }
+  }
+  &-bgGray{
+    background-color: #f4f4f4;
+  }
+  &-disabled{
+    background-color: #828282;
+    color: #fff;
+  }
+}
